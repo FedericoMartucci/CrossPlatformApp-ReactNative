@@ -6,7 +6,8 @@ import ProductCard from './ProductCard';
 import { styles } from '../util/styles';
 
 const Products = ({ category = "" }: ProductsProps) => {
-    const { products, loading, error } = useGetProducts(category);
+  const { products, loading, error } = useGetProducts(category);
+  
   return  loading? (
     <View style={styles.loader}>
       <ActivityIndicator size={"large"}/>

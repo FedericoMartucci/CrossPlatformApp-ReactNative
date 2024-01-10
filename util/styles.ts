@@ -1,13 +1,23 @@
 import { Dimensions, StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
+    scrollView: {
+      backgroundColor: "#fff",
+    },
     header: {
       flex: 1,
+      zIndex: 1,
       width:"100%",
-      borderRadius: 300,
+      shadowColor: '#000',
+      shadowOffset: {
+        width: 0,
+        height: 8,
+      },
+      shadowOpacity: 0.5,
+      shadowRadius: 4,
       backgroundColor: "#fff",
-      marginTop: 64,
-      marginBottom: 16,
+      paddingTop: 64,
+      paddingBottom: 16,
       flexDirection: "row",
       justifyContent: "space-around",
       alignItems: "center",
@@ -58,7 +68,7 @@ export const styles = StyleSheet.create({
         width: 0,
         height: 0,
       },
-      shadowOpacity: 0.5,
+      shadowOpacity: 0.8,
       shadowRadius: 8,
     },
     product: {

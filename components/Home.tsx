@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import { ScrollView, TouchableHighlight, View, Text, Image, RefreshControl,
          StatusBar, NativeSyntheticEvent, NativeScrollEvent } from 'react-native'
 import { styles } from '../util/styles'
 import Products from './Products'
 
-const Home = () => {
+const Home = ({ navigation }) => {
   const [hidden, setHidden] = useState(false);
-  const [refreshing, setRefreshing] = React.useState(false);
+  const [refreshing, setRefreshing] = useState(false);
 
-  const onRefresh = React.useCallback(() => {
+  const onRefresh = useCallback(() => {
     setRefreshing(true);
     setTimeout(() => {
       setRefreshing(false);
@@ -17,6 +17,7 @@ const Home = () => {
 
   return (
     <ScrollView
+    style={styles.scrollView}
     scrollEventThrottle={16}
     scrollsToTop={true}
     onScroll={(e: NativeSyntheticEvent<NativeScrollEvent>) => setHidden(e.nativeEvent.contentOffset.y !== 0)}
@@ -31,7 +32,7 @@ const Home = () => {
       hidden={hidden}/>
         <View style={styles.header}>
           <Text style={styles.headerText}>Our <Text style={styles.bold}>products</Text></Text>
-          <TouchableHighlight onPress={() => console.log("search")} style={styles.searchButton} underlayColor="#eef" activeOpacity={0.7}>
+          <TouchableHighlight onPress={() => navigation.navigate("Cart")} style={styles.searchButton} underlayColor="#eef" activeOpacity={0.7}>
               <Image source={require("../assets/cart.png")} style={styles.searchIcon}></Image>
           </TouchableHighlight>
         </View>

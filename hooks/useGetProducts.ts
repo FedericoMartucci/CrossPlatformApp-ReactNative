@@ -20,7 +20,7 @@ export const useGetProducts = (category: string) => {
             setLoading(false);
             console.log(e);
         }
-      }, [category]);
+    }, [category]);
     
     return { products, loading, error };
 }
