@@ -8,13 +8,14 @@ import { Product } from '../util/types'
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 
 export type RootStackParamList = {
-  Product: { product: Product } | undefined;
+  ProductDetails: { product: Product } | undefined;
+  Cart: {} | undefined;
 };
 
 const ProductCard = ({ product }: ProductCardProps) => {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   return (
-    <TouchableHighlight style={styles.productCard} onPress={() => navigation.navigate("Product", { product })} underlayColor="#eee" activeOpacity={0.7}>
+    <TouchableHighlight style={styles.productCard} onPress={() => navigation.navigate("ProductDetails", { product })} underlayColor="#eee" activeOpacity={0.7}>
       <View style={styles.product}>
         <Image source={{uri: product.image}} style={styles.image}/>
         <Text style={styles.text}>${product.price}</Text>

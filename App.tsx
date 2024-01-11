@@ -3,24 +3,15 @@ import {NavigationContainer, NavigationProp, useNavigation} from '@react-navigat
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import ProductDetails from './components/ProductDetails';
 import Cart from './components/Cart';
-import { styles } from './util/styles';
-import { Text, TouchableHighlight, Image, View } from 'react-native';
-import { Product } from './util/types';
 
 const Stack = createNativeStackNavigator();
-
-
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{headerShown: false}}
-          />
-        <Stack.Screen name="Product" component={ProductDetails} />
+      <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Home" component={Home}/>
+        <Stack.Screen name="ProductDetails" component={ProductDetails} />
         <Stack.Screen name="Cart" component={Cart} />
       </Stack.Navigator>
     </NavigationContainer>
