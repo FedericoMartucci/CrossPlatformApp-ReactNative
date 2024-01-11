@@ -8,6 +8,11 @@ export interface Product {
     rating: Rating;
 }
 
+export interface CartProduct {
+    product: Product;
+    quantity: number;
+}
+
 export interface Rating {
     rate: number;
     count: number;
@@ -20,3 +25,12 @@ export interface ProductsProps {
 export interface ProductCardProps {
     product: Product;
 }
+
+export interface CartItemProps {
+    cartItem: CartProduct;
+}
+
+export type RootStackParamList = {
+    ProductDetails: { product: Product } | undefined;
+    Cart: {} | undefined;
+};

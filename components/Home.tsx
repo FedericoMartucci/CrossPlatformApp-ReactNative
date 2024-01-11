@@ -3,11 +3,14 @@ import { ScrollView, TouchableHighlight, View, Text, Image, RefreshControl,
          StatusBar, NativeSyntheticEvent, NativeScrollEvent } from 'react-native'
 import { styles } from '../util/styles'
 import Products from './Products'
+import { useAppDispatch } from '../redux/hooks'
 
 const Home = ({ navigation }) => {
   const [hidden, setHidden] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
 
+  const dispatch = useAppDispatch();
+  
   const onRefresh = useCallback(() => {
     setRefreshing(true);
     setTimeout(() => {
@@ -37,7 +40,7 @@ const Home = ({ navigation }) => {
           </TouchableHighlight>
         </View>
         <View style={styles.container}>
-          <Products category=''/>
+          <Products/>
         </View>
     </ScrollView>
   )

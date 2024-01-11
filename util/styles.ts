@@ -5,7 +5,6 @@ export const styles = StyleSheet.create({
       backgroundColor: "#fff",
     },
     header: {
-      flex: 1,
       zIndex: 1,
       width:"100%",
       shadowColor: '#000',
@@ -23,6 +22,7 @@ export const styles = StyleSheet.create({
       alignItems: "center",
     },
     headerText: {
+      color: "#000",
       fontFamily: "Avenir",
       fontWeight: "400",
       fontSize: 32,
