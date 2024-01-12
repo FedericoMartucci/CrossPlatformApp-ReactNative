@@ -30,6 +30,11 @@ export interface CartItemProps {
     cartItem: CartProduct;
 }
 
+export interface CartButtonProps {
+    cartItems: number;
+    style: any;
+}
+
 export type RootStackParamList = {
     ProductDetails: { product: Product } | undefined;
     Cart: {} | undefined;

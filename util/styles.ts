@@ -39,6 +39,19 @@ export const styles = StyleSheet.create({
       borderColor: "#000",
       borderRadius: 64,
     },
+    cartButton: {
+      backgroundColor: "#fff",
+      marginTop: 64,
+      zIndex: 1,
+      position: "absolute",
+      justifyContent: "center",
+      alignItems: "center",
+      width: 52,
+      height: 36,
+      borderWidth: 1,
+      borderColor: "#000",
+      borderRadius: 64,
+    },
     searchIcon: {
       width: 24,
       height: 24,
@@ -83,10 +96,8 @@ export const styles = StyleSheet.create({
     productDetailsContainer: {
       flex: 1,
       backgroundColor: "#334",
-      alignItems: "center",
     },
     productImage: {
-      borderRadius: 60,
       width: 300,
       height: 300,
       marginBottom: 16,
@@ -96,7 +107,7 @@ export const styles = StyleSheet.create({
       borderBottomLeftRadius: 9998,
       backgroundColor: "#fff",
       width: "100%",
-      height: "65%",
+      height: 600,
       alignItems: "center",
       shadowOffset: {
         width: 0,
@@ -219,5 +230,94 @@ export const styles = StyleSheet.create({
       fontSize: 24,
       color: "#fff",
       fontWeight: "700"
-    }
+    },
+    cartItem: {
+      borderRadius: 32,
+      flexDirection: "row",
+      backgroundColor: "#fff",
+      margin: 16,
+      padding: 16,
+      shadowOffset: {
+        width: 0,
+        height: 0,
+      },
+      justifyContent: "space-between",
+      alignItems: "center",
+      shadowColor: "#000",
+      shadowOpacity: 0.7,
+      shadowRadius: 8,
+    },
+    removeCartItem: {
+      backgroundColor: "#669",
+      justifyContent: "center",
+      alignItems: "center",
+      width: 32,
+      height: 32,
+      borderWidth: 1,
+      borderColor: "#000",
+      borderRadius: 64,
+    },
+    quantity: {
+      fontFamily: "Avenir",
+      fontSize: 16,
+      color: "#fff",
+      fontWeight: "700"
+    },
+    decrementCartCounter: {
+      backgroundColor: "#447",
+      paddingHorizontal: 8,
+      borderBottomLeftRadius: 64,
+      borderTopLeftRadius: 64,
+      fontFamily: "Avenir",
+      justifyContent: "center"
+    },
+    incrementCartCounter: {
+      backgroundColor: "#447",
+      paddingHorizontal: 8,
+      borderBottomRightRadius: 64,
+      borderTopRightRadius: 64,
+      fontFamily: "Avenir",
+      justifyContent: "center"
+    },
+    cartCounter: {
+      backgroundColor: "#669",
+      paddingHorizontal: 8,
+      borderRightWidth: 1,
+      borderLeftWidth: 1,
+      fontFamily: "Avenir",
+      fontSize: 24
+    },
+    crossIcon: {
+      width: 16,
+      height: 16,
+    },
+    cartItemTitle: {
+      fontFamily: "Avenir",
+      fontSize: 14,
+    },
+    cartItemDescription: {
+      color: "#888",
+      fontFamily: "Avenir",
+      fontSize: 12,
+    },
+    emptyCart: {
+      fontFamily: "Avenir",
+      fontSize: 32,
+      color: "#fff",
+      fontWeight: "700",
+      shadowOffset: {
+        width: 2,
+        height: 2,
+      },
+      shadowRadius: 2,
+      shadowOpacity: 1,
+      shadowColor: "#001"
+    },
+    emptyCartImage: {
+      width: 450,
+      height: 400,
+      shadowRadius: 8,
+      shadowOpacity: 0.7,
+      shadowColor: "#aab"
+    },
   });

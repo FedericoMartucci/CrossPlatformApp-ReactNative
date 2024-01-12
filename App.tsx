@@ -1,8 +1,8 @@
-import Home from './components/Home';
+import Home from './screens/home-screen/Home';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import ProductDetails from './components/ProductDetails';
-import Cart from './components/Cart';
+import ProductDetails from './screens/product-screen/ProductDetails';
+import Cart from './screens/cart-screen/Cart';
 import React from 'react';
 import { Provider } from "react-redux";
 import { store } from './redux/store';

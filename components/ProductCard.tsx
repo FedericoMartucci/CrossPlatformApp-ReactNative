@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
-import { useGetProducts } from '../hooks/useGetProducts';
+import React from 'react'
 import { ProductCardProps, RootStackParamList } from '../util/types';
-import { Alert, View, Image, Text, TouchableHighlight } from 'react-native';
+import { View, Image, Text, TouchableHighlight } from 'react-native';
 import { styles } from '../util/styles';
-import { Product } from '../util/types'
 
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 
